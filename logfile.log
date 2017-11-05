@@ -1,0 +1,338 @@
+DEBUG:root:we are in the same error
+DEBUG:botocore.session:Loading variable profile from defaults.
+DEBUG:botocore.session:Loading variable config_file from defaults.
+DEBUG:botocore.session:Loading variable credentials_file from defaults.
+DEBUG:botocore.session:Loading variable data_path from defaults.
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/boto3/data/s3/2006-03-01/resources-1.json
+DEBUG:botocore.session:Loading variable profile from defaults.
+DEBUG:botocore.session:Loading variable profile from defaults.
+DEBUG:botocore.session:Loading variable region from config file with value 'us-east-1'.
+DEBUG:botocore.session:Loading variable profile from defaults.
+DEBUG:botocore.session:Loading variable ca_bundle from defaults.
+DEBUG:botocore.session:Loading variable profile from defaults.
+DEBUG:botocore.session:Loading variable credentials_file from defaults.
+DEBUG:botocore.session:Loading variable config_file from defaults.
+DEBUG:botocore.session:Loading variable profile from defaults.
+DEBUG:botocore.session:Loading variable metadata_service_timeout from defaults.
+DEBUG:botocore.session:Loading variable profile from defaults.
+DEBUG:botocore.session:Loading variable metadata_service_num_attempts from defaults.
+DEBUG:botocore.session:Loading variable profile from defaults.
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.session:Loading variable profile from defaults.
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x108c9f598>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x10e523b70>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x108c9f378>
+DEBUG:botocore.args:The s3 config key is not a dictionary type, ignoring its value of: None
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.client:Defaulting to S3 virtual host style addressing with path style addressing fallback.
+DEBUG:boto3.resources.factory:Loading s3:s3
+DEBUG:botocore.loaders:Loading JSON file: /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/botocore/data/s3/2006-03-01/paginators-1.json
+DEBUG:boto3.resources.collection:Calling s3:list_buckets with {}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.ListBuckets: calling handler <function validate_bucket_name at 0x10e2c08c8>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.ListBuckets: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x10eacb7f0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.ListBuckets: calling handler <function generate_idempotent_uuid at 0x10e2c0510>
+DEBUG:botocore.hooks:Event before-call.s3.ListBuckets: calling handler <function add_expect_header at 0x10e2c0d90>
+DEBUG:botocore.hooks:Event before-call.s3.ListBuckets: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x10eacb7f0>>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=ListBuckets) (verify_ssl=True) with params: {'url_path': '/', 'query_string': '', 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.4.7 Python/3.6.2 Darwin/15.6.0 Botocore/1.7.25 Resource'}, 'body': b'', 'url': 'https://s3.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x10e966400>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': None}}}
+DEBUG:botocore.hooks:Event request-created.s3.ListBuckets: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x10e957f98>>
+DEBUG:botocore.hooks:Event choose-signer.s3.ListBuckets: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x10e70fba8>>
+DEBUG:botocore.hooks:Event choose-signer.s3.ListBuckets: calling handler <function set_operation_specific_signer at 0x10e2c0400>
+DEBUG:botocore.hooks:Event before-sign.s3.ListBuckets: calling handler <function fix_s3_host at 0x113a27378>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/
+
+host:s3.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20171105T081341Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20171105T081341Z
+20171105/us-east-1/s3/aws4_request
+78bedf6dba66039e6e633223ce4e5b414e88f827172351a24c2434d1cb7417c6
+DEBUG:botocore.auth:Signature:
+d84a8f583432d6a05e0b27648bdbd4c2f1d425070cda89e0154e691ce25e74c6
+DEBUG:botocore.endpoint:Sending http request: <PreparedRequest [GET]>
+INFO:botocore.vendored.requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com
+DEBUG:botocore.vendored.requests.packages.urllib3.connectionpool:"GET / HTTP/1.1" 200 None
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'F6mRZ4k5viY3Xa0WpbHO1+LLAfM22Ugo07fTano4DX2sURKP4dDEpWeacfLLhNZHDvBn+eD39pQ=', 'x-amz-request-id': 'D5AF56E09DB46D2C', 'date': 'Sun, 05 Nov 2017 08:13:42 GMT', 'content-type': 'application/xml', 'transfer-encoding': 'chunked', 'server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<ListAllMyBucketsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Owner><ID>b91df6fcdd031929618107e0c477b07cd3d1f1502058c69e986dae0f237dc79d</ID><DisplayName>zhao.men</DisplayName></Owner><Buckets><Bucket><Name>pleasepass</Name><CreationDate>2017-10-27T08:17:56.000Z</CreationDate></Bucket><Bucket><Name>pleasepassokkk</Name><CreationDate>2017-10-27T08:23:02.000Z</CreationDate></Bucket><Bucket><Name>zhaomengqi8000</Name><CreationDate>2017-10-01T21:52:31.000Z</CreationDate></Bucket><Bucket><Name>zillowdata</Name><CreationDate>2017-10-24T23:33:43.000Z</CreationDate></Bucket></Buckets></ListAllMyBucketsResult>'
+DEBUG:botocore.hooks:Event needs-retry.s3.ListBuckets: calling handler <botocore.retryhandler.RetryHandler object at 0x10eacb048>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.ListBuckets: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x10eacb7f0>>
+DEBUG:boto3.resources.factory:Loading s3:Bucket
+DEBUG:boto3.resources.model:Renaming Bucket attribute name
+DEBUG:botocore.hooks:Event creating-resource-class.s3.Bucket: calling handler <function lazy_call.<locals>._handler at 0x10e523510>
+DEBUG:boto:Using access key provided by client.
+DEBUG:boto:Using secret key provided by client.
+DEBUG:boto:Using access key provided by client.
+DEBUG:boto:Using secret key provided by client.
+DEBUG:boto:path=/
+DEBUG:boto:auth_path=/zillowdata/
+DEBUG:boto:Method: HEAD
+DEBUG:boto:Path: /
+DEBUG:boto:Data: 
+DEBUG:boto:Headers: {}
+DEBUG:boto:Host: zillowdata.s3.amazonaws.com:443
+DEBUG:boto:Port: 443
+DEBUG:boto:Params: {}
+DEBUG:boto:establishing HTTPS connection: host=zillowdata.s3.amazonaws.com, kwargs={'timeout': 70, 'port': 443}
+DEBUG:boto:Token: None
+DEBUG:boto:StringToSign:
+HEAD
+
+
+Sun, 05 Nov 2017 08:13:42 GMT
+/zillowdata/
+DEBUG:boto:Signature:
+AWS AKIAJANYK5DJH5HGRJSA:BhyguGHCeHP6m2HJFVuZJ7nQw14=
+DEBUG:boto:Final headers: {'User-Agent': 'Boto/2.48.0 Python/3.6.2 Darwin/15.6.0', 'Date': 'Sun, 05 Nov 2017 08:13:42 GMT', 'Authorization': 'AWS AKIAJANYK5DJH5HGRJSA:BhyguGHCeHP6m2HJFVuZJ7nQw14=', 'Content-Length': '0'}
+DEBUG:boto:Response headers: [('x-amz-id-2', 'ez70PT7soUzqBPC3wWqTZpX7DM0oRLQIDrKZnMI5C9ppJwKHmPI2YLmfwVGKXEWwKwf60lbHy0o='), ('x-amz-request-id', '51D0A6A00E0D2BAE'), ('Date', 'Sun, 05 Nov 2017 08:13:43 GMT'), ('x-amz-bucket-region', 'us-east-1'), ('Content-Type', 'application/xml'), ('Transfer-Encoding', 'chunked'), ('Server', 'AmazonS3')]
+DEBUG:boto3.resources.factory:Loading s3:Bucket
+DEBUG:boto3.resources.model:Renaming Bucket attribute name
+DEBUG:botocore.hooks:Event creating-resource-class.s3.Bucket: calling handler <function lazy_call.<locals>._handler at 0x10e523510>
+DEBUG:boto3.resources.action:Calling s3:put_object with {'Bucket': 'zillowdata', 'Key': 'midterm_2017.csv', 'Body': <_io.BufferedReader name='midterm_2017.csv'>, 'ACL': 'public-read'}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x10e2c3598>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x10e2c0950>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x10e2c3c80>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x10e2c08c8>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x10eacb7f0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x10e2c0510>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function conditionally_calculate_md5 at 0x10e2c0840>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x10e2c0d90>
+DEBUG:botocore.handlers:Adding expect 100 continue header to request.
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x10eacb7f0>>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=PutObject) (verify_ssl=True) with params: {'url_path': '/zillowdata/midterm_2017.csv', 'query_string': {}, 'method': 'PUT', 'headers': {'x-amz-acl': 'public-read', 'User-Agent': 'Boto3/1.4.7 Python/3.6.2 Darwin/15.6.0 Botocore/1.7.25 Resource', 'Content-MD5': 'gDxvYYNdgUJsT1H/uXS8nw==', 'Expect': '100-continue'}, 'body': <_io.BufferedReader name='midterm_2017.csv'>, 'url': 'https://s3.amazonaws.com/zillowdata/midterm_2017.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x10e966400>, 'has_streaming_input': True, 'auth_type': None, 'signing': {'bucket': 'zillowdata'}}}
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x10e957f98>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x10e70fba8>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x10e2c0400>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function fix_s3_host at 0x113a27378>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+PUT
+/zillowdata/midterm_2017.csv
+
+content-md5:gDxvYYNdgUJsT1H/uXS8nw==
+host:s3.amazonaws.com
+x-amz-acl:public-read
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20171105T081342Z
+
+content-md5;host;x-amz-acl;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20171105T081342Z
+20171105/us-east-1/s3/aws4_request
+b6a720db4bef5941f2f24be1bb34d9b01bc3dcf6b89bfb9dfc28025fb32e0431
+DEBUG:botocore.auth:Signature:
+720732d4e78cc43421f257340f0388bc6edbce59ca00052cc8d08fa7f9c07cce
+DEBUG:botocore.endpoint:Sending http request: <PreparedRequest [PUT]>
+DEBUG:botocore.awsrequest:Waiting for 100 Continue response.
+DEBUG:botocore.awsrequest:100 Continue response seen, now sending request body.
+DEBUG:botocore.vendored.requests.packages.urllib3.connectionpool:"PUT /zillowdata/midterm_2017.csv HTTP/1.1" 200 0
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'Oj0Nwwu74vw85hUb1wjZbh+76YF3SHEr/DhVUi85YKMwOVp9Qrvnrbs1/mhNDsNk5adGdHfVwds=', 'x-amz-request-id': '0443454AC3FD1EFE', 'date': 'Sun, 05 Nov 2017 08:13:43 GMT', 'x-amz-version-id': 'NRRfnjndp3XWQs3VZOaWYZHormZHSYfq', 'etag': '"803c6f61835d81426c4f51ffb974bc9f"', 'content-length': '0', 'server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x10eacb048>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x10eacb7f0>>
+DEBUG:boto3.resources.action:Response: {'ResponseMetadata': {'RequestId': '0443454AC3FD1EFE', 'HostId': 'Oj0Nwwu74vw85hUb1wjZbh+76YF3SHEr/DhVUi85YKMwOVp9Qrvnrbs1/mhNDsNk5adGdHfVwds=', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amz-id-2': 'Oj0Nwwu74vw85hUb1wjZbh+76YF3SHEr/DhVUi85YKMwOVp9Qrvnrbs1/mhNDsNk5adGdHfVwds=', 'x-amz-request-id': '0443454AC3FD1EFE', 'date': 'Sun, 05 Nov 2017 08:13:43 GMT', 'x-amz-version-id': 'NRRfnjndp3XWQs3VZOaWYZHormZHSYfq', 'etag': '"803c6f61835d81426c4f51ffb974bc9f"', 'content-length': '0', 'server': 'AmazonS3'}, 'RetryAttempts': 0}, 'ETag': '"803c6f61835d81426c4f51ffb974bc9f"', 'VersionId': 'NRRfnjndp3XWQs3VZOaWYZHormZHSYfq'}
+DEBUG:boto3.resources.factory:Loading s3:Object
+DEBUG:botocore.hooks:Event creating-resource-class.s3.Object: calling handler <function lazy_call.<locals>._handler at 0x10e523bf8>
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Cloud HTTP/1.1" 200 1766
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /4/sessions HTTP/1.1" 200 63
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 158
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Capabilities/API HTTP/1.1" 200 638
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/PostFile HTTP/1.1" 200 91
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/ParseSetup HTTP/1.1" 200 1685
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/Parse HTTP/1.1" 200 1888
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_90f3a57e5ebfe53bb8294b94d1364b52 HTTP/1.1" 200 1134
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_90f3a57e5ebfe53bb8294b94d1364b52 HTTP/1.1" 200 1121
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Frames/Key_Frame__upload_8f845bc0fd82264c5e2ee79397bb4e97.hex?row_count=10 HTTP/1.1" 200 8672
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 335
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Frames/py_1_sid_a4d4?row_count=5 HTTP/1.1" 200 8192
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 339
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 357
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 339
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/ModelBuilders/glm HTTP/1.1" 200 27625
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_a33faa61d563e87ab800ee5fba5e43e2 HTTP/1.1" 200 1032
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_a33faa61d563e87ab800ee5fba5e43e2 HTTP/1.1" 200 1032
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Models/glm_default HTTP/1.1" 200 31140
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 339
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /4/Predictions/models/glm_default/frames/py_5_sid_a4d4 HTTP/1.1" 200 746
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8eb47cfb788ce9bd92bbf4280e0f4920 HTTP/1.1" 200 1106
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8eb47cfb788ce9bd92bbf4280e0f4920 HTTP/1.1" 200 1107
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Frames/predictions_aa20_glm_default_on_py_5_sid_a4d4?row_count=10 HTTP/1.1" 200 4261
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Cloud HTTP/1.1" 200 1766
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /4/sessions HTTP/1.1" 200 63
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 158
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Capabilities/API HTTP/1.1" 200 638
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/PostFile HTTP/1.1" 200 91
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/ParseSetup HTTP/1.1" 200 1685
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/Parse HTTP/1.1" 200 1888
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_a3bc2a59a3d404369f8b43c352e94e0e HTTP/1.1" 200 1133
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_a3bc2a59a3d404369f8b43c352e94e0e HTTP/1.1" 200 1120
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Frames/Key_Frame__upload_be8e7c637cd576afa6ba9db185fc42ee.hex?row_count=10 HTTP/1.1" 200 8672
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 335
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Frames/py_6_sid_b996?row_count=5 HTTP/1.1" 200 8192
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 339
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 357
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 339
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/ModelBuilders/drf HTTP/1.1" 200 24677
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1032
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1050
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1050
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1050
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1050
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1051
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1051
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1051
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1050
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1051
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1051
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1051
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1051
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_8a71106e0ee9eb7020b2423c97b44686 HTTP/1.1" 200 1034
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Models/drf_default HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 341
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /4/Predictions/models/drf_default/frames/py_10_sid_b996 HTTP/1.1" 200 748
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_b278b2686ce90fb6df8f4f7c14474334 HTTP/1.1" 200 1109
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_b278b2686ce90fb6df8f4f7c14474334 HTTP/1.1" 200 1110
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_b278b2686ce90fb6df8f4f7c14474334 HTTP/1.1" 200 1110
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_b278b2686ce90fb6df8f4f7c14474334 HTTP/1.1" 200 1110
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_b278b2686ce90fb6df8f4f7c14474334 HTTP/1.1" 200 1110
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Frames/predictions_a2dd_drf_default_on_py_10_sid_b996?row_count=10 HTTP/1.1" 200 4250
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 341
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 359
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 156
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /99/Rapids HTTP/1.1" 200 341
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/ModelBuilders/glm HTTP/1.1" 200 27743
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_9a667d4ca9743ed1947f106b64e4029 HTTP/1.1" 200 1028
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_9a667d4ca9743ed1947f106b64e4029 HTTP/1.1" 200 1028
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Models/glm_default HTTP/1.1" 200 30438
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "POST /3/ModelBuilders/drf HTTP/1.1" 200 24797
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_82a1d64e98c23c7e91f34e45e6464763 HTTP/1.1" 200 1032
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_82a1d64e98c23c7e91f34e45e6464763 HTTP/1.1" 200 1050
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_82a1d64e98c23c7e91f34e45e6464763 HTTP/1.1" 200 1049
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_82a1d64e98c23c7e91f34e45e6464763 HTTP/1.1" 200 1050
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_82a1d64e98c23c7e91f34e45e6464763 HTTP/1.1" 200 1050
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_82a1d64e98c23c7e91f34e45e6464763 HTTP/1.1" 200 1051
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_82a1d64e98c23c7e91f34e45e6464763 HTTP/1.1" 200 1051
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_82a1d64e98c23c7e91f34e45e6464763 HTTP/1.1" 200 1050
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Jobs/$03017f00000132d4ffffffff$_82a1d64e98c23c7e91f34e45e6464763 HTTP/1.1" 200 1034
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "GET /3/Models/drf_default HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "DELETE /4/sessions/_sid_b996 HTTP/1.1" 200 124
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost
+DEBUG:urllib3.connectionpool:http://localhost:54321 "DELETE /4/sessions/_sid_a4d4 HTTP/1.1" 200 124

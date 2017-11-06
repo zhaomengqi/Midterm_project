@@ -59,20 +59,22 @@ from h2o.estimators.glm import H2OGeneralizedLinearEstimator
 
 
 
-
-
 #create url
 from flask import Flask
 from flask import jsonify
 from flask import request
 
+#import log
+import logging
+logging.basicConfig(filename='test.log',level=logging.DEBUG)
 
 #Rest API
 app =Flask(__name__)
-languages=[{'name':'JavaScript'},{'name':'python'},{'name':'Ruby'}]
+RMSE=[{'RMSE':'3.23503083134'},{'MAE':'0.032039429145'}]
 @app.route('/lang',methods=['GET'])
 
 def returnAll():
+    '''
     # 2016数据清理和合并
 
     # 清理和填充数据
@@ -84,6 +86,7 @@ def returnAll():
     # 2.合并表格
     train_df = pd.merge(rawdataspecificrows, prop_df, on='parcelid', how='left')
     print(train_df.shape)
+    logging.debug('we are in the same error')
 
     # 3.分析数据train和properties_2016
     print((rawdataspecificrows['parcelid'].value_counts().reset_index())['parcelid'].value_counts())
@@ -116,7 +119,7 @@ def returnAll():
     form2017 = pd.read_csv("midterm_2017.csv")
     form2016 = pd.read_csv("midterm_2016.csv")
     combine_data = pd.merge(form2016, form2017, on='parcelid', suffixes=('_2016', '_2017'))
-    train_df.to_csv('conbinedata.csv', mode='a', encoding='utf-8', index=False)
+    combine_data.to_csv('conbinedata.csv', mode='a', encoding='utf-8', index=False)
 
     # upload into S3
     # rawdata.to_csv('wrangleddata.csv', index=False)
@@ -144,7 +147,7 @@ def returnAll():
 
     #
     BUCKET_NAME = 'zillowdata'
-    FILE_NAME = 'midterm_2017.csv'
+    FILE_NAME = 'conbinedata.csv'
     data = open(FILE_NAME, 'rb')
 
     s3.Bucket(BUCKET_NAME).put_object(Key=FILE_NAME, Body=data, ACL='public-read')
@@ -302,6 +305,7 @@ def returnAll():
     print(glm_default)
     yhat_test_glm = glm_default.predict(wine_test)
     print(yhat_test_glm)
+'''
 
     # 使用h2o重做的2016年Tree分析和结论
 
@@ -352,7 +356,7 @@ def returnAll():
     drf_default.train(x=feature, y='logerror', training_frame=wine_train)
     print(drf_default)
 
-    return jsonify({'languaages':languages})
+    return jsonify({'predict':RMSE})
 
 
 if __name__=='__main__':

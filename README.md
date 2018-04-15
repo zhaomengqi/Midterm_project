@@ -35,7 +35,7 @@ o Neural networks
 • Which model works best? Write a report discussing the different models you considered and which one works best. You should consider interpretability, computational overhead, accuracy measures, etc. in your discussion.
 
 ###  3.Model deployment: choose an enterprise platform to deploy your model.
-https://docs.google.com/spreadsheets/d/17NqDJHdJtqfvgVHAl2_YplG9O8t3PvWB233YaByI2w8/edit?ts =59c65fd3#gid=558508381
+https://docs.google.com/spreadsheets/d/17NqDJHdJtqfvgVHAl2_YplG9O8t3PvWB233YaByI2w8/edit?ts=59c65fd3#gid=558508381
 
 • Trained model from step 2 or redo the “best” model in the assigned platform. 
 • Advertise the JSON API to use to invoke the model

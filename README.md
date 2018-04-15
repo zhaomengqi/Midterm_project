@@ -47,7 +47,9 @@ results. Create a Jupyter notebook to illustrate how to use your REST API
 Write a Jupyter notebook and illustrate using this REST API and review these articles for the algorithm and how to use SQL to get these results:
 
 ✓ http://www.arubin.org/files/geo_search.pdf
+
 ✓ https://www.percona.com/blog/2014/06/19/using-udfs-for-geo-distance-search-in-mysql/ 
+
 ✓ https://www.percona.com/blog/2013/10/21/using-the-new-mysql-spatial-functions-5-6-for-geo-enabled-applications/
 
     

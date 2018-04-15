@@ -4,9 +4,13 @@
 ## Working with large datasets and machine learning: working on a real-world data set of Zillow data and expand the housing problem in the class.   https://www.continuum.io/blog/developer-blog/productionizing-and-deploying-data-science- 
 
 You could review the following and the links posted to understand the problem:
+
 • https://www.kaggle.com/c/zillow-prize-1
+
 • https://www.kaggle.com/philippsp/exploratory-analysis-zillow
+
 • https://www.kaggle.com/sudalairajkumar/simple-exploration-notebook-zillow-prize 
+
 • https://www.kaggle.com/captcalculator/a-very-extensive-zillow-exploratory-analysis
 
 ### 1.Data ingestion, EDA, Wrangling:
